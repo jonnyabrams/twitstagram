@@ -1,9 +1,10 @@
+import ProfileSide from '../../components/profileSide/ProfileSide'
 import './home.css'
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="profileSide">Profile</div>
+      <ProfileSide />
       <div className="postSide">Posts</div>
       <div className="rightSide">Rightside</div>
     </div>
