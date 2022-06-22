@@ -1,4 +1,5 @@
 import LogoSearch from '../logoSearch/LogoSearch'
+import ProfileCard from '../profileCard/ProfileCard'
 import './profileSide.css'
 
 const ProfileSide = () => {
@@ -6,6 +7,7 @@ const ProfileSide = () => {
     <div>
       <div className="profile_side">
         <LogoSearch />
+        <ProfileCard />
       </div>
     </div>
   )
