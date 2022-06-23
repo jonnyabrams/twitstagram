@@ -1,0 +1,6 @@
+.profile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 16rem auto 16rem;
+  gap: 1rem;
+}
