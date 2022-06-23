@@ -1,14 +1,14 @@
 import Posts from '../posts/Posts'
 import PostShare from '../postShare/PostShare'
-import './postSide.css'
+import './feed.css'
 
-const PostSide = () => {
+const Feed = () => {
   return (
-    <div className="post_side">
+    <div className="feed">
       <PostShare />
       <Posts />
     </div>
   )
 }
 
-export default PostSide
+export default Feed
