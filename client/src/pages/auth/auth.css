@@ -1,0 +1,43 @@
+.auth {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  gap: 4rem;
+  position: relative;
+}
+
+/* for all divs inside */
+.auth > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth_left {
+  gap: 2rem;
+}
+
+.auth_left > img {
+  width: 4rem;
+  height: 4rem;
+}
+
+.webname > h1 {
+  font-size: 3rem;
+  background-color: red;
+  /* Create the gradient */
+  background-image: var(--buttonBg);
+  /* Set the b/g size and repeat properties */
+  background-size: 100%;
+  background-repeat: repeat;
+  /* Use text as mask for b/g - shows gradient as text color rather than b/g element */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+.webname > h6 {
+  font-size: 0.85rem;
+}

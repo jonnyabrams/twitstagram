@@ -1,6 +1,6 @@
 .home {
   position: relative;
   display: grid;
-  grid-template-columns: 16rem auto 16rem;
+  grid-template-columns: 18rem auto 14rem;
   gap: 1rem;
 }
