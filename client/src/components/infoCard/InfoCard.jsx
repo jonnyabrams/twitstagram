@@ -1,7 +1,7 @@
 import './infoCard.css'
 import { useState } from 'react'
 import {UilPen} from '@iconscout/react-unicons'
-import ProfileModal from '../ProfileModal.jsx/ProfileModal'
+import ProfileModal from '../profileModal/ProfileModal'
 
 const InfoCard = () => {
   const [modalOpened, setModalOpened] = useState(false)
