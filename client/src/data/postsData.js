@@ -7,7 +7,7 @@ export const PostsData = [
   {
     img: postPic1,
     name: 'Dwight Rortugal',
-    content: 'Hey everybody',
+    description: 'Hey everybody',
     likes: 45,
     liked: true
   },
@@ -15,21 +15,21 @@ export const PostsData = [
   {
     img: postPic2,
     name: 'Bobson Dugnutt',
-    content: 'Good morning!',
+    description: 'Good morning!',
     likes: 458,
     liked: false
   },
   {
     img: postPic3,
     name: 'Jeff Bulldozer',
-    content: 'WORD',
+    description: 'WORD',
     likes: 450023,
     liked: false
   },
   {
     img: postPic4,
     name: 'Marie Blorx',
-    content: 'Look at this',
+    description: 'Look at this',
     likes: 652,
     liked: true
   },
