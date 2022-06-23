@@ -1,6 +1,7 @@
 import ProfileLeft from '../../components/profileLeft/ProfileLeft'
 import ProfileCard from '../../components/profileCard/ProfileCard'
 import Feed from '../../components/feed/Feed'
+import RightSide from '../../components/rightSide/RightSide'
 import './profile.css'
 
 const Profile = () => {
@@ -11,6 +12,7 @@ const Profile = () => {
         <ProfileCard />
         <Feed />
       </div>
+      <RightSide />
     </div>
   )
 }
