@@ -3,6 +3,7 @@ import bodyParser from 'body-parser'
 import mongoose from 'mongoose'
 import 'dotenv/config'
 import authRoute from './routes/authRoute.js'
+import userRoute from './routes/userRoute.js'
 
 const app = express()
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
@@ -14,3 +15,4 @@ mongoose
   .catch((error) => console.log(error))
 
 app.use('/auth', authRoute)
+app.use('/user', userRoute)
