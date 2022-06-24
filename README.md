@@ -12,3 +12,4 @@ A Twitter/Instagram hybrid built using a MERN stack.
 * CSS
 * React Unicons
 * Mantine for modals
+* Thunder Client for manually testing HTTP requests
