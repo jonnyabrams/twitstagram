@@ -12,5 +12,3 @@ A Twitter/Instagram hybrid built using a MERN stack.
 * CSS
 * React Unicons
 * Mantine for modals
-
-zainkeepscode
