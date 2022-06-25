@@ -16,5 +16,6 @@ A Twitter/Instagram hybrid built using the MERN stack.
 * Mantine for modals
 * Bcrypt for hashing passwords
 * Thunder Client for manually testing HTTP requests
+* Axios
 * JWT Authentication
 * Concurrently (to run client and server simultaneously)

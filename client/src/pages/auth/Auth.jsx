@@ -2,6 +2,7 @@ import './auth.css'
 import { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import Logo from '../../img/assets/twitstagram-logo.png'
+import { logIn, signUp } from '../../actions/authAction'
 
 const Auth = () => {
   const dispatch = useDispatch()
