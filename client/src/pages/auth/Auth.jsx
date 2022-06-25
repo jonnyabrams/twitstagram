@@ -4,6 +4,12 @@ import Logo from '../../img/assets/twitstagram-logo.png'
 
 const Auth = () => {
   const [isSignUp, setIsSignUp] = useState(false)
+  const [data, setData] = useState({ firstname: "", lastname: "", username: "", email: "", password: "", confirmpassword: "" })
+
+  const handleChange = (e) => {
+    setData({ ...data, [e.target.name]: e.target.value })
+  }
+
   return (
     <div className="auth">
       {/* Left side */}
@@ -22,24 +28,24 @@ const Auth = () => {
           { isSignUp &&
             <>
               <div>
-                <input type="text" placeholder="First name" className="info_input" name="firstname" />
-                <input type="text" placeholder="Last name" className="info_input" name="lastname" />
+                <input type="text" placeholder="First name" className="info_input" name="firstname" onChange={handleChange} />
+                <input type="text" placeholder="Last name" className="info_input" name="lastname" onChange={handleChange} />
               </div> 
             
 
               <div>
-                <input type="text" placeholder="Username" className="info_input" name="username" />
+                <input type="text" placeholder="Username" className="info_input" name="username" onChange={handleChange} />
               </div>
             </>
           }
 
           <div>
-            <input type="text" placeholder="Email" className="info_input" name="email" />
+            <input type="email" placeholder="Email" className="info_input" name="email" onChange={handleChange} />
           </div>
 
           <div>
-            <input type="text" placeholder="Password" className="info_input" name="password" />
-            { isSignUp && <input type="text" placeholder="Confirm password" className="info_input" name="confirmpassword" /> }
+            <input type="password" placeholder="Password" className="info_input" name="password" onChange={handleChange} />
+            { isSignUp && <input type="password" placeholder="Confirm password" className="info_input" name="confirmpassword" onChange={handleChange} /> }
           </div>
 
           <div>
