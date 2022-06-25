@@ -1,11 +1,12 @@
 import './auth.css'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import Logo from '../../img/assets/twitstagram-logo.png'
 import { logIn, signUp } from '../../redux/actions/authAction'
 
 const Auth = () => {
   const dispatch = useDispatch()
+  const loading = useSelector((state) => state.authReducer.loading)
   const [isSignUp, setIsSignUp] = useState(true)
   const [data, setData] = useState({ 
     firstname: "", 
@@ -88,7 +89,7 @@ const Auth = () => {
               { isSignUp ? "Already have an account? Log in!" : "Don't have an account? Sign up!" }
             </span>
           </div>
-          <button className="button info_button" type="submit">{ isSignUp ? "Sign up" : "Log in" }</button>
+          <button className="button info_button" type="submit" disabled={loading}>{ loading ? "Loading..." : isSignUp ? "Sign up" : "Log in" }</button>
         </form>
       </div>   
     </div>
