@@ -9,6 +9,7 @@ A Twitter/Instagram hybrid built using the MERN stack.
 * Express.js
 * MongoDB
 * Redux
+* React Redux
 * Redux Thunk Middleware
 * CSS
 * React Unicons
