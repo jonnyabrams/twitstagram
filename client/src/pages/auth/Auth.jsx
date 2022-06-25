@@ -1,8 +1,10 @@
 import './auth.css'
 import { useState } from 'react'
+import { useDispatch } from 'react-redux'
 import Logo from '../../img/assets/twitstagram-logo.png'
 
 const Auth = () => {
+  const dispatch = useDispatch()
   const [isSignUp, setIsSignUp] = useState(true)
   const [data, setData] = useState({ 
     firstname: "", 
@@ -22,9 +24,9 @@ const Auth = () => {
     e.preventDefault()
 
     if(isSignUp) {
-      if (data.password !== data.confirmpassword) {
-        setPasswordsMatch(false)
-      }
+      data.password === data.confirmpassword ? dispatch(signUp(data)) : setPasswordsMatch(false)
+      } else {
+      dispatch(logIn(data))
     }
   }
 
