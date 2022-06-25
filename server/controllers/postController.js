@@ -117,7 +117,7 @@ export const getTimelinePosts = async (req, res) => {
       .sort((a,b)=>{
           return b.createdAt - a.createdAt
       })
-      );
+      )
   } catch (error) {
     res.status(500).json(error)
   }
