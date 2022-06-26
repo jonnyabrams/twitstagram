@@ -15,20 +15,20 @@ const ProfileCard = () => {
       </div>
 
       <div className="profile_name">
-        <span>Dwight Rortugal</span>
-        <span>Chief Royal Food Taster</span>
+        <span>{user.firstname} {user.lastname}</span>
+        <span>{user.worksAt ? user.worksAt : "Write about yourself" }</span>
       </div>
 
       <div className="follow_status">
         <hr />
         <div>
           <div className="follow">
-            <span>2,543</span>
+            <span>{user.following.length}</span>
             <span>Following</span>
           </div>
           <div className="vertical_line"></div>
           <div className="follow">
-            <span>843</span>
+            <span>{user.followers.length}</span>
             <span>Followers</span>
           </div>
 
