@@ -6,6 +6,7 @@ import cors from 'cors'
 import authRoute from './routes/authRoute.js'
 import userRoute from './routes/userRoute.js'
 import postRoute from './routes/postRoute.js'
+import uploadRoute from './routes/uploadRoute.js'
 
 const app = express()
 app.use(bodyParser.json({ limit: '30mb', extended: true }))
@@ -20,3 +21,4 @@ mongoose
 app.use('/auth', authRoute)
 app.use('/user', userRoute)
 app.use('/post', postRoute)
+app.use('/upload', uploadRoute)

@@ -6,9 +6,11 @@ import {UilPlayCircle} from "@iconscout/react-unicons"
 import {UilLocationPoint} from "@iconscout/react-unicons"
 import {UilSchedule} from "@iconscout/react-unicons"
 import {UilTimes} from "@iconscout/react-unicons"
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
+import { uploadImage } from '../../redux/actions/uploadAction'
 
 const PostShare = () => {
+  const dispatch = useDispatch()
   const [image, setImage] = useState(null)
   const imageRef = useRef()
   const description = useRef()
@@ -36,6 +38,12 @@ const PostShare = () => {
       data.append("file", image)
       newPost.image = fileName
       console.log(newPost)
+
+      try {
+        dispatch(uploadImage(data))
+      } catch (error) {
+        console.log(error)
+      }
     }
   }
 

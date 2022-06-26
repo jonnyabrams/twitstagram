@@ -19,4 +19,5 @@ A Twitter/Instagram hybrid built using the MERN stack.
 * Axios
 * JWT Authentication
 * Concurrently (to run client and server simultaneously)
-* cors for sending cross-origin requests
+* Cors for sending cross-origin requests
+* Multer for uploading media to the server
