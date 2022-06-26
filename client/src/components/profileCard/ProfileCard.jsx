@@ -2,11 +2,9 @@ import './profileCard.css'
 import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-const ProfileCard = () => {
+const ProfileCard = ({ location }) => {
   const { user } = useSelector((state) => state.authReducer.authData)
   const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
-
-  const ProfilePage = false
 
   return (
     <div className="profile_card">
@@ -33,7 +31,7 @@ const ProfileCard = () => {
             <span>Followers</span>
           </div>
 
-          {ProfilePage && (
+          {location === 'profilePage' && (
             <>
               <div className="vertical_line">
 
@@ -47,7 +45,7 @@ const ProfileCard = () => {
         </div>
         <hr />
       </div>
-      {ProfilePage ? '' : <span><Link style={{ textDecoration: "none", color: "inherit" }} to={ `/profile/${user._id}` }>My Profile</Link></span>}
+      {location === 'profilePage' ? '' : <span><Link style={{ textDecoration: "none", color: "inherit" }} to={ `/profile/${user._id}` }>My Profile</Link></span>}
     </div>
   )
 }
