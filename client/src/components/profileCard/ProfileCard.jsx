@@ -10,7 +10,7 @@ const ProfileCard = () => {
   return (
     <div className="profile_card">
       <div className="profile_images">
-        <img src={user.coverPic ? serverPublic + user.coverPicture : serverPublic + 'defaultCover.jpeg' } alt="" />
+        <img src={user.coverPic ? serverPublic + user.coverPic : serverPublic + 'defaultCover.jpeg' } alt="" />
         <img src={user.profilePic ? serverPublic + user.profilePic : serverPublic + 'defaultProfile.png' } alt="" />
       </div>
 
