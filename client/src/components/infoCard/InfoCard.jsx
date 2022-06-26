@@ -40,18 +40,18 @@ const InfoCard = () => {
       </div>
 
       <div className="info">
-        <span><b>Location </b></span>
-        <span>London</span>
+        <span><b>Lives in </b></span>
+        <span>{profileUser.livesIn}</span>
       </div>
 
       <div className="info">
         <span><b>Status </b></span>
-        <span>In a relationship</span>
+        <span>{profileUser.relationship}</span>
       </div>
 
       <div className="info">
-        <span><b>Job </b></span>
-        <span>Sumo referee</span>
+        <span><b>Works at </b></span>
+        <span>{profileUser.worksAt}</span>
       </div>
 
       <button className="button logout-button">Logout</button>
