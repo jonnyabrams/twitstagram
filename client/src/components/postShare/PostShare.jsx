@@ -7,7 +7,7 @@ import {UilLocationPoint} from "@iconscout/react-unicons"
 import {UilSchedule} from "@iconscout/react-unicons"
 import {UilTimes} from "@iconscout/react-unicons"
 import { useDispatch, useSelector } from 'react-redux'
-import { uploadImage } from '../../redux/actions/uploadAction'
+import { uploadImage, uploadPost } from '../../redux/actions/uploadAction'
 
 const PostShare = () => {
   const dispatch = useDispatch()
@@ -45,6 +45,7 @@ const PostShare = () => {
         console.log(error)
       }
     }
+    dispatch(uploadPost(newPost))
   }
 
   return (
