@@ -15,6 +15,12 @@
   height: 1.5rem;
 }
 
+/* if there's also a link (ie. Home icon) - adding link messed it up */
+.nav_icons > a > img {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .r-button {
   height: 3rem;
   width: 80%;
