@@ -57,7 +57,7 @@ const PostShare = () => {
 
   return (
     <div className="post_share">
-      <img src={user.profilePic ? serverPublic + user.profilePic : serverPublic + 'defaultProfile.png' } alt="" />
+      <img src={ user.profilePic ? serverPublic + user.profilePic : serverPublic + 'defaultProfile.png' } alt="" />
       <div>
         <input type="text" placeholder="What's on your mind?" ref={description} required />
         <div className="post_options">
