@@ -80,17 +80,17 @@ export const deleteUser = async (req, res) => {
 // follow user
 export const followUser = async (req, res) => {
   const id = req.params.id
-  const { currentUserId } = req.body
+  const { _id } = req.body
 
-  if (currentUserId === id) {
+  if (_id === id) {
     res.status(403).json("You can't follow yourself")
   } else {
     try {
       const followedUser = await UserModel.findById(id)
-      const followingUser = await UserModel.findById(currentUserId)
+      const followingUser = await UserModel.findById(_id)
 
-      if (!followedUser.followers.includes(currentUserId)) {
-        await followedUser.updateOne({ $push: { followers: currentUserId } })
+      if (!followedUser.followers.includes(_id)) {
+        await followedUser.updateOne({ $push: { followers: _id } })
         await followingUser.updateOne({ $push: { following: id } })
         res.status(200).json("User followed!")
       } else {
@@ -105,17 +105,17 @@ export const followUser = async (req, res) => {
 // unfollow user
 export const unfollowUser = async (req, res) => {
   const id = req.params.id
-  const { currentUserId } = req.body
+  const { _id } = req.body
 
-  if (currentUserId === id) {
+  if (_id === id) {
     res.status(403).json("You can't follow yourself")
   } else {
     try {
       const followedUser = await UserModel.findById(id)
-      const followingUser = await UserModel.findById(currentUserId)
+      const followingUser = await UserModel.findById(_id)
 
-      if (followedUser.followers.includes(currentUserId)) {
-        await followedUser.updateOne({ $pull: { followers: currentUserId } })
+      if (followedUser.followers.includes(_id)) {
+        await followedUser.updateOne({ $pull: { followers: _id } })
         await followingUser.updateOne({ $pull: { following: id } })
         res.status(200).json("User unfollowed")
       } else {
