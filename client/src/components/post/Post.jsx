@@ -13,8 +13,8 @@ const Post = ({data}) => {
   const [likes, setLikes] = useState(data.likes.length)
 
   const handleLike = () => {
-    setLiked(!liked)
     likePost(data._id, user._id)
+    setLiked(!liked)
     liked ? setLikes((prev) => prev - 1) : setLikes((prev) => prev + 1)
   }
 

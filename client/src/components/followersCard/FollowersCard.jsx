@@ -12,7 +12,6 @@ const FollowersCard = () => {
     const fetchUsers = async () => {
       const { data } = await getAllUsers()
       setUsers(data)
-      console.log(data)
     }
     fetchUsers()
   }, [])
