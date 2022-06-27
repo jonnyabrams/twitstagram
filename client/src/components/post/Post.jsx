@@ -28,6 +28,7 @@ const Post = ({data}) => {
         <img src={Share} alt="" />
       </div>
 
+      <span style={{ color: "var(--gray)", fontSize: '12px' }}>Posted by @{data.author}</span>
       <span style={{ color: "var(--gray)", fontSize: '12px' }}>{likes} likes</span>
 
       <div className="details">
