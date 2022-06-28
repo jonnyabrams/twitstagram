@@ -1,18 +1,18 @@
-# Twitstagram
+# Twitstagram (MERN)
 
-A Twitter/Instagram hybrid. Can't choose between the two? Fret no longer?
+A Twitter/Instagram hybrid. Can't choose between the two? Fret no longer!
 
-Twitstagram was built using the MERN stack (MongoDB, Express.js, React.js, Node.js). Users can sign up, login, post, like/unlike posts, edit their profile, follow other users and log out to their heart's content.
+Twitstagram was built using the MERN stack (MongoDB, Express.js, React.js, Node.js). Users can sign up, log in, post, like/unlike posts, edit their own profile, follow other users and log out to their heart's content.
 
-On a user's feed, they only see their own posts and the posts of those they follow, presented in order of the most recent.
+On a user's home feed, they only see their own posts and the posts of those they follow, presented in order of the most recent. On their profile, they only see their own posts.
 
-## Video Demo
+## Video demo
 
 https://user-images.githubusercontent.com/97295867/176141059-67130c04-b412-467b-b69d-744aee2a15f9.mp4
 
-NB: There's an error towards the end where the user posts a post that appears already 'liked'. This was a local storage issue that I've since resolved.
+NB: There's an error towards the end where the user posts a post that appears on the screen already 'liked'. This was a local storage issue that I've since resolved.
 
-## Technologies Used
+## Technologies used
 
 * React.js
 * Node.js
@@ -31,6 +31,12 @@ NB: There's an error towards the end where the user posts a post that appears al
 * Concurrently (to run client and server simultaneously)
 * Cors for sending cross-origin requests
 * Multer for uploading media to the server
+
+## My approach
+
+Whereas usually I start with the backend, on this occasion I designed the frontend first (using dummy data for users and posts) before connecting the two.
+
+I used Redux for state management as I was keen to learn more about it, but I could probably have used the React Context API (or even Redux Toolkit) instead.
 
 ## Improvements I would like to make
 
