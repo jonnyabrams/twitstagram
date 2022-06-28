@@ -29,7 +29,7 @@ const Post = ({data}) => {
       </div>
 
       <span style={{ color: "var(--gray)", fontSize: '12px' }}>Posted by @{data.author}</span>
-      <span style={{ color: "var(--gray)", fontSize: '12px' }}>{likes} likes</span>
+      <span style={{ color: "var(--gray)", fontSize: '12px' }}>{likes === 1 ? "1 like" : `${likes} likes`}</span>
 
       <div className="details">
         <span><b>{data.name}</b></span>
