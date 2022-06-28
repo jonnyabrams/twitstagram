@@ -2,6 +2,10 @@
 
 A Twitter/Instagram hybrid built using the MERN stack.
 
+
+https://user-images.githubusercontent.com/97295867/176141059-67130c04-b412-467b-b69d-744aee2a15f9.mp4
+
+
 ## Technologies Used
 
 * React.js
