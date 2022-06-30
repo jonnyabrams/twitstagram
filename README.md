@@ -6,11 +6,17 @@ Twitstagram was built using the MERN stack (MongoDB, Express.js, React.js, Node.
 
 On a user's home feed, they only see their own posts and the posts of those they follow, presented in order of the most recent. On their profile, they only see their own posts.
 
+<img width="1440" alt="Screenshot 2022-06-30 at 15 32 39" src="https://user-images.githubusercontent.com/97295867/176704749-ff106d39-eba9-4306-8fd5-bae6a4a05bdb.png">
+
+---
+
 ## Video demo
 
 https://user-images.githubusercontent.com/97295867/176141059-67130c04-b412-467b-b69d-744aee2a15f9.mp4
 
 NB: There's an error towards the end where the user posts a post that appears on the screen already 'liked'. This was a local storage issue that I've since resolved.
+
+---
 
 ## Technologies used
 
@@ -32,11 +38,26 @@ NB: There's an error towards the end where the user posts a post that appears on
 * Cors for sending cross-origin requests
 * Multer for uploading media to the server
 
+---
+
+## Instructions for use
+
+1. Clone this repository
+2. cd into its directory
+3. cd into the server folder
+4. Run `npm run dev` in the terminal to run the server and client concurrently
+5. Visit [http://localhost:3000](http://localhost:3000) in your browser
+6. Get Tweetstagramming
+
+---
+
 ## My approach
 
 Whereas usually I start with the backend, on this occasion I designed the frontend first (using dummy data for users and posts) before connecting the two.
 
 I used Redux for state management as I was keen to learn more about it, but I could probably have used the React Context API (or even Redux Toolkit) instead.
+
+---
 
 ## Improvements I would like to make
 
