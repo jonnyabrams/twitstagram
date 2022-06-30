@@ -6,7 +6,7 @@ Twitstagram was built using the MERN stack (MongoDB, Express.js, React.js, Node.
 
 On a user's home feed, they only see their own posts and the posts of those they follow, presented in order of the most recent. On their profile, they only see their own posts.
 
-<img width="1440" alt="Screenshot 2022-06-30 at 15 32 39" src="https://user-images.githubusercontent.com/97295867/176704749-ff106d39-eba9-4306-8fd5-bae6a4a05bdb.png">
+<img width="1440" alt="Screenshot 2022-06-30 at 15 39 02" src="https://user-images.githubusercontent.com/97295867/176705525-18ae4dd7-0baa-4856-bf11-02430276e2c3.png">
 
 ---
 
