@@ -10,7 +10,7 @@ import { uploadImage, uploadPost } from '../../redux/actions/uploadAction'
 
 const PostShare = () => {
   const dispatch = useDispatch()
-  const { user } = useSelector((state) => state.authReducer.authData)
+  const {user} = useSelector((state) => state.authReducer.authData)
   const loading = useSelector((state) => state.postReducer.uploading)
   const [image, setImage] = useState(null)
   const imageRef = useRef()

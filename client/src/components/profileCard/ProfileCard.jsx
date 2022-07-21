@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
 const ProfileCard = ({ location }) => {
-  const { user } = useSelector((state) => state.authReducer.authData)
+  const {user} = useSelector((state) => state.authReducer.authData)
   const posts = useSelector((state) => state.postReducer.posts)
   const serverPublic = process.env.REACT_APP_PUBLIC_FOLDER
 
