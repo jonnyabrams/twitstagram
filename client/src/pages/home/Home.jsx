@@ -1,3 +1,4 @@
+import { useSelector } from 'react-redux'
 import Feed from '../../components/feed/Feed'
 import ProfileSide from '../../components/profileSide/ProfileSide'
 import RightSide from '../../components/rightSide/RightSide'
