@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { followUser, unfollowUser } from '../../redux/actions/userAction'
 
@@ -18,7 +19,9 @@ const User = ({person}) => {
   return (
     <div>
       <div className="followers">
-        <img src={ person.profilePic ? serverPublic + person.profilePic : serverPublic + 'defaultProfile.png' } alt="" className="follower_img" />
+        <Link to={`/profile/${person._id}`}>
+          <img src={ person.profilePic ? serverPublic + person.profilePic : serverPublic + 'defaultProfile.png' } alt="" className="follower_img" />
+        </Link>
         <div className="name">
           <span>{person.firstname}</span>
           <span>@{person.username}</span>

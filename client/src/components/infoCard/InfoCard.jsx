@@ -7,26 +7,27 @@ import ProfileModal from '../profileModal/ProfileModal'
 import { useEffect } from 'react'
 import * as userApi from '../../redux/api/userRequest.js'
 import { logout } from "../../redux/actions/authAction"
+import axios from 'axios'
 
 const InfoCard = () => {
+  const currentUser = useSelector((state) => state.authReducer.authData.user)
+  const [profileUser, setProfileUser] = useState({})
   const [modalOpened, setModalOpened] = useState(false)
   const dispatch = useDispatch()
-  const params = useParams()
-  const profileUserId = params.id
-  const [profileUser, setProfileUser] = useState({})
-  const { user } = useSelector((state) => state.authReducer.authData)
+  const profileUserId = useParams().id
+  const isCurrentUser = profileUserId === currentUser._id
+  const user = isCurrentUser ? currentUser : profileUser
 
   useEffect(() => {
-    const fetchProfileUser = async () => {
-      if (profileUserId === user._id) {
-        setProfileUser(user)
-      } else {
-        const profileUser = await userApi.getUser(profileUserId)
-        setProfileUser(profileUser)
-      }
+    if (profileUserId === currentUser._id) {
+      return
     }
-    fetchProfileUser()
-  }, [user])
+    const fetchUser = async () => {
+      const res = await axios.get(`/user/${profileUserId}`)
+      setProfileUser(res.data)
+    }
+    fetchUser()
+  }, [profileUserId, currentUser])
 
   const handleLogout = () => {
     dispatch(logout())
@@ -46,17 +47,17 @@ const InfoCard = () => {
 
       <div className="info">
         <span><b>Lives in </b></span>
-        <span>{profileUser.livesIn}</span>
+        <span>{user.livesIn}</span>
       </div>
 
       <div className="info">
         <span><b>Status </b></span>
-        <span>{profileUser.relationship}</span>
+        <span>{user.relationship}</span>
       </div>
 
       <div className="info">
         <span><b>Works at </b></span>
-        <span>{profileUser.worksAt}</span>
+        <span>{user.worksAt}</span>
       </div>
 
       <button className="button logout-button" onClick={handleLogout}>Logout</button>
