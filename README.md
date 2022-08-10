@@ -65,7 +65,7 @@ mongod --dbpath $HOME/mongodb-data
 Set your MongoDB URI:
 
 ```
-echo MONGO_URI=mongodb://localhost:27017/yourtube >> .env
+echo MONGO_URI=mongodb://localhost:27017/twitstagram >> .env
 ```
 
 ---
@@ -80,18 +80,7 @@ Run `npm install` from both the `./server` and `./client` directories.
 
 Launch MongoDB with `mongod`.
 
-Run `npm run dev` from the `./server` directory.
-
----
-
-## Instructions for use
-
-1. Clone this repository
-2. cd into its directory
-3. cd into the server folder
-4. Run `npm run dev` in the terminal to run the server and client concurrently
-5. Visit [http://localhost:3000](http://localhost:3000) in your browser
-6. Get Tweetstagramming
+Run `npm run dev` from the `./server` directory and visit [http://localhost:3000](http://localhost:3000) in the browser if you're not automatically directed there.
 
 ---
 
