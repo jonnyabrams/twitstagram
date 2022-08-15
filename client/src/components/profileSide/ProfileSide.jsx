@@ -1,11 +1,11 @@
-import { useSelector } from 'react-redux'
-import FollowersCard from '../followersCard/FollowersCard'
-import LogoSearch from '../logoSearch/LogoSearch'
-import ProfileCard from '../profileCard/ProfileCard'
-import './profileSide.css'
+import { useSelector } from "react-redux";
+import FollowersCard from "../followersCard/FollowersCard";
+import LogoSearch from "../logoSearch/LogoSearch";
+import ProfileCard from "../profileCard/ProfileCard";
+import "./profileSide.css";
 
 const ProfileSide = () => {
-  const { user } = useSelector((state) => state.authReducer.authData)
+  const { user } = useSelector((state) => state.authReducer.authData);
 
   return (
     <div>
@@ -15,7 +15,7 @@ const ProfileSide = () => {
         <FollowersCard />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ProfileSide
+export default ProfileSide;

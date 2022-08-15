@@ -1,5 +1,5 @@
-import './trendCard.css'
-import { TrendData } from '../../data/trendData'
+import "./trendCard.css";
+import { TrendData } from "../../data/trendData";
 
 const TrendCard = () => {
   return (
@@ -11,10 +11,10 @@ const TrendCard = () => {
             <span>#{trend.name}</span>
             <span>{trend.shares}k shares</span>
           </div>
-        )
+        );
       })}
     </div>
-  )
-}
+  );
+};
 
-export default TrendCard
+export default TrendCard;

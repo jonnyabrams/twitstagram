@@ -1,7 +1,7 @@
-import '../profileSide/profileSide.css'
-import LogoSearch from '../logoSearch/LogoSearch'
-import InfoCard from '../infoCard/InfoCard'
-import FollowersCard from '../followersCard/FollowersCard'
+import "../profileSide/profileSide.css";
+import LogoSearch from "../logoSearch/LogoSearch";
+import InfoCard from "../infoCard/InfoCard";
+import FollowersCard from "../followersCard/FollowersCard";
 
 const ProfileLeft = () => {
   return (
@@ -10,7 +10,7 @@ const ProfileLeft = () => {
       <InfoCard />
       <FollowersCard />
     </div>
-  )
-}
+  );
+};
 
-export default ProfileLeft
+export default ProfileLeft;
